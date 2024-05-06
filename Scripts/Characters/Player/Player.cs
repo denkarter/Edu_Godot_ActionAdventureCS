@@ -1,3 +1,4 @@
+using ActionAdventureCS.Scripts.Constants;
 using Godot;
 
 namespace ActionAdventureCS.Scripts.Characters.Player
@@ -13,8 +14,8 @@ namespace ActionAdventureCS.Scripts.Characters.Player
         {
             base._Ready();
             _animationPlayerNode = this.GetNode<AnimationPlayer>("AnimationPlayer");
-            GD.Print(_animationPlayerNode.Name);
-            _animationPlayerNode.Play("Idle");
+            //GD.Print(_animationPlayerNode.Name);
+            _animationPlayerNode.Play(PlayerConstants.AnimIdle);
         }
 
         public override void _PhysicsProcess(float delta)
@@ -23,15 +24,16 @@ namespace ActionAdventureCS.Scripts.Characters.Player
             Vector3 velocity = new Vector3(_direction.x, 0, _direction.y) * 5;
             MoveAndSlide(velocity);
             if (velocity == Vector3.Zero)
-                _animationPlayerNode.Play("Idle");
+                _animationPlayerNode.Play(PlayerConstants.AnimIdle);
             else
-                _animationPlayerNode.Play("Move");
+                _animationPlayerNode.Play(PlayerConstants.AnimMove);
         }
 
         public override void _Input(InputEvent @event)
         {
             base._Input(@event);
-            _direction = Input.GetVector("MoveLeft", "MoveRight", "MoveForward", "MoveBackward");
+            _direction = Input.GetVector(PlayerConstants.InputMoveLeft, PlayerConstants.InputMoveRight,
+                PlayerConstants.InputMoveForward, PlayerConstants.InputMoveBackward);
         }
 
         //  // Called every frame. 'delta' is the elapsed time since the previous frame.

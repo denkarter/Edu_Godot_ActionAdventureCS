@@ -4,15 +4,19 @@ namespace ActionAdventureCS.Scripts.Characters.Player
 {
     public class Player : KinematicBody
     {
+        // [ExportGroup("Required Nodes")]
+        private AnimationPlayer _animationPlayerNode;
+        private Sprite3D _spriteNode;
+        
         private Vector2 _direction = new Vector2();
-        // Declare member variables here. Examples:
-        // private int a = 2;
-        // private string b = "text";
-
-        // Called when the node enters the scene tree for the first time.
+        
         public override void _Ready()
         {
-        
+            base._Ready();
+            //int index = this.GetChildCount();
+            //_animationPlayerNode = this.GetChild<AnimationPlayer>();
+            _animationPlayerNode = this.GetNode<AnimationPlayer>("AnimationPlayer");
+            GD.Print(_animationPlayerNode.Name);
         }
 
         public override void _PhysicsProcess(float delta)

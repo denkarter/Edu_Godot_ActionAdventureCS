@@ -2,21 +2,19 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Idle Blinking_000.png-d058f49eee55b0cb4f6e2c8358520527.s3tc.stex"
-path.etc2="res://.import/Idle Blinking_000.png-d058f49eee55b0cb4f6e2c8358520527.etc2.stex"
+path="res://.import/Idle Blinking_000.png-d058f49eee55b0cb4f6e2c8358520527.stex"
 metadata={
-"imported_formats": [ "s3tc", "etc2" ],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://Assets/Sprites/Characters/Player/Idle Blinking/Idle Blinking_000.png"
-dest_files=[ "res://.import/Idle Blinking_000.png-d058f49eee55b0cb4f6e2c8358520527.s3tc.stex", "res://.import/Idle Blinking_000.png-d058f49eee55b0cb4f6e2c8358520527.etc2.stex" ]
+dest_files=[ "res://.import/Idle Blinking_000.png-d058f49eee55b0cb4f6e2c8358520527.stex" ]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
